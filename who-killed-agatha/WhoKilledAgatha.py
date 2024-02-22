@@ -1,1 +1,3 @@
 import Constraint
+
+class WhoKilledAgatha:
