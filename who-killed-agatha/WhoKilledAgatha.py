@@ -6,3 +6,6 @@ class WhoKilledAgatha:
 
     def hate_constraint(self):
         pass
+
+    def richer_constraint(self):
+        pass
