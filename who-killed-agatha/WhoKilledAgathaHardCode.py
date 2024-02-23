@@ -1,11 +1,14 @@
 class WhoKilledAgatha:
-    def __init__(self, agatha_hate_array = [], butler_hate_array = [], charles_hate_array = [], agatha_rich_array = [], butler_rich_aray = [], charles_rich_array = []):
+    def __init__(self, agatha_hate_array = [], butler_hate_array = [], charles_hate_array = [], agatha_rich_array = [], butler_rich_aray = [], charles_rich_array = [], hates_agatha = [], not_richer_than_agatha = [], killer):
         self.agatha_hate_array = agatha_hate_array
         self.butler_hate_array = butler_hate_array
         self.charles_hate_array = charles_hate_array
         self.agatha_rich_array = agatha_rich_array
         self.butler_rich_array = butler_rich_aray
         self.charles_rich_array = charles_rich_array
+        self.hates_agatha = hates_agatha
+        self.not_richer_than_agatha = not_richer_than_agatha
+        self.killer = killer
 
     def agatha_hates_who(self):
         # **'Agatha hates everybody except the butler'
@@ -87,7 +90,12 @@ class WhoKilledAgatha:
         return self.not_richer_than_agatha
     
     def get_the_killer(self):
-        pass
+        for i in range(len(self.hates_agatha)):
+            for j in range(len(self.not_richer_than_agatha)):
+                if self.hates_agatha[i] == self.not_richer_than_agatha[j]:
+                    self.killer.append(self.hates_agatha[i])
+
+        return self.killer
 
 
 find_killer = WhoKilledAgatha()
