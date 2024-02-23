@@ -1,5 +1,5 @@
 class WhoKilledAgatha:
-    def __init__(self, agatha_hate_array = [], butler_hate_array = [], charles_hate_array = [], agatha_rich_array = [], butler_rich_aray = [], charles_rich_array = [], hates_agatha = [], not_richer_than_agatha = [], killer):
+    def __init__(self, agatha_hate_array = [], butler_hate_array = [], charles_hate_array = [], agatha_rich_array = [], butler_rich_aray = [], charles_rich_array = [], hates_agatha = [], not_richer_than_agatha = [], killer = []):
         self.agatha_hate_array = agatha_hate_array
         self.butler_hate_array = butler_hate_array
         self.charles_hate_array = charles_hate_array
@@ -55,10 +55,10 @@ class WhoKilledAgatha:
     
     def butler_richer_than_who(self):
         # ** 'butler hates everyone not richer than Aunt Agatha'
-        self.butler_richer_than_who.append('Butler')
-        self.butler_richer_than_who.append(1)
-        self.butler_richer_than_who.append(0)
-        self.butler_richer_than_who.append(0.5)
+        self.butler_rich_array.append('Butler')
+        self.butler_rich_array.append(1)
+        self.butler_rich_array.append(0)
+        self.butler_rich_array.append(0.5)
         return self.butler_rich_array
     
 
@@ -96,8 +96,19 @@ class WhoKilledAgatha:
                     self.killer.append(self.hates_agatha[i])
 
         return self.killer
+    
 
 
 find_killer = WhoKilledAgatha()
 find_killer.agatha_hates_who()
-print("the value is: ", find_killer.agatha_hate_array)
+find_killer.butler_hates_who()
+find_killer.charles_hates_who()
+find_killer.agatha_richer_than_who()
+find_killer.butler_richer_than_who()
+find_killer.charles_richer_than_who()
+find_killer.check_who_hates_agatha()
+find_killer.check_not_richer_than_agatha()
+find_killer.get_the_killer()
+
+for i in range (len(find_killer.killer)):
+    print("The killer is: ", find_killer.killer[i])
