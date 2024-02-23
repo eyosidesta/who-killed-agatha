@@ -77,7 +77,18 @@ class WhoKilledAgatha:
         return self.hates_agatha
     
     def check_not_richer_than_agatha(self):
+        if self.agatha_rich_array[1] == 0:
+            self.not_richer_than_agatha.append('Agatha')
+        if self.butler_hate_array[1] == 0:
+            self.not_richer_than_agatha.append('Buttler')
+        if self.charles_hate_array[1] == 0:
+            self.not_richer_than_agatha.append('Charles')
+
+        return self.not_richer_than_agatha
+    
+    def get_the_killer(self):
         pass
+
 
 find_killer = WhoKilledAgatha()
 find_killer.agatha_hates_who()
