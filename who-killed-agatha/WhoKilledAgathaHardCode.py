@@ -33,3 +33,17 @@ class WhoKilledAgatha:
         self.charles_hate_array.push('Charles', 0, 0.5, 0)
         return self.charles_hate_array
     
+    def agatha_richer_than_who(self):
+        self.agatha_rich_array.push('Agatha', 0, 0, 0.5)
+        return self.agatha_rich_array
+    
+    def butler_richer_than_who(self):
+        # ** 'butler hates everyone not richer than Aunt Agatha'
+        self.butler_richer_than_who.push('Butler', 1, 0, 0.5)
+        return self.butler_hate_array
+    
+
+    def charles_richer_than_who(self):
+        self.charles_hate_array.push('Charles', 0.5, 0.5, 0)
+        return self.charles_hate_array
+    
