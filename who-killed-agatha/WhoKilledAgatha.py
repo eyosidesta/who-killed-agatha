@@ -34,3 +34,6 @@ problem.addConstraint(lambda a_richer, b_richer: a_richer == 1 and b_richer == 0
 problem.addConstraint(lambda a, b, c: a == 1 and c == 0 and b == 0, ('Agatha', 'Butler', 'Charles'))  # Agatha hates Charles and herself
 problem.addConstraint(AllDifferentConstraint(), people)  # No one hates everyone
 
+# Additional constraints for the solution
+problem.addConstraint(lambda a_richer, a: a_richer == 'not_defined' and a == 0, ('Agatha_richer', 'Agatha'))  # Agatha is not richer than herself and hates herself
+
