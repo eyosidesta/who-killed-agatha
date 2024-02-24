@@ -37,3 +37,12 @@ problem.addConstraint(AllDifferentConstraint(), people)  # No one hates everyone
 # Additional constraints for the solution
 problem.addConstraint(lambda a_richer, a: a_richer == 'not_defined' and a == 0, ('Agatha_richer', 'Agatha'))  # Agatha is not richer than herself and hates herself
 
+# Solve the problem
+solutions = problem.getSolutions()
+
+# Print the solution
+if solutions:
+    print("Solution found:")
+    print(solutions[0])
+else:
+    print("No solution found.")
