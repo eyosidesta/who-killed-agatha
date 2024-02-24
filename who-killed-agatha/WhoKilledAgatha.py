@@ -27,4 +27,5 @@ problem.addVariables([f"{person}_richer" for person in people], richer_values)
 
 # Add constraints based on the given information
 problem.addConstraint(lambda a, c: a == 1 and c == 0, ('Agatha', 'Charles'))  # Agatha hates Charles
+problem.addConstraint(lambda c, a: a == 1 and c == 0, ('Charles', 'Agatha'))  # Charles hates everyone Agatha hates
 
