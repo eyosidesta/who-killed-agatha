@@ -1,5 +1,9 @@
 class WhoKilledAgatha:
-    def __init__(self, agatha_hate_array = [], butler_hate_array = [], charles_hate_array = [], agatha_rich_array = [], butler_rich_aray = [], charles_rich_array = [], hates_agatha = [], not_richer_than_agatha = [], killer = []):
+    def __init__(self, agatha_hate_array = [], butler_hate_array = [], 
+                 charles_hate_array = [], agatha_rich_array = [], 
+                 butler_rich_aray = [], charles_rich_array = [], 
+                 hates_agatha = [], not_richer_than_agatha = [], 
+                 killer = []):
         self.agatha_hate_array = agatha_hate_array
         self.butler_hate_array = butler_hate_array
         self.charles_hate_array = charles_hate_array
@@ -96,8 +100,6 @@ class WhoKilledAgatha:
 
         return self.killer
     
-
-
 find_killer = WhoKilledAgatha()
 find_killer.agatha_hates_who()
 find_killer.butler_hates_who()
