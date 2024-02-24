@@ -30,3 +30,4 @@ problem.addConstraint(lambda a, c: a == 1 and c == 0, ('Agatha', 'Charles'))  # 
 problem.addConstraint(lambda c, a: a == 1 and c == 0, ('Charles', 'Agatha'))  # Charles hates everyone Agatha hates
 problem.addConstraint(lambda c, b: c == 0 and b == 1, ('Charles', 'Butler'))  # Charles doesn't hate the butler
 problem.addConstraint(lambda b: b == 1, ('Butler',))  # The butler hates everyone not richer than Agatha
+problem.addConstraint(lambda a_richer, b_richer: a_richer == 1 and b_richer == 0, ('Agatha_richer', 'Butler_richer'))  # Agatha is not richer than the butler
