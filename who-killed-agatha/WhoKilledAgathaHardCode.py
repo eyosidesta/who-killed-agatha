@@ -19,7 +19,6 @@ class WhoKilledAgatha:
         self.agatha_hate_array.append(1)
         self.agatha_hate_array.append(0)
         self.agatha_hate_array.append(1)
-
         return self.agatha_hate_array
     
     def butler_hates_who(self):
