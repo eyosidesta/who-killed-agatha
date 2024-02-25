@@ -31,5 +31,13 @@ class AgathaSolver:
         # Solve the problem
         solutions = self.problem.getSolutions()
 
+        # Print the solution
+        if solutions:
+            print("Solution found:")
+            print(solutions[0])
+        else:
+            print("No solution found.")
+
+
 
     
