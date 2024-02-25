@@ -64,7 +64,6 @@ class WhoKilledAgatha:
         self.butler_rich_array.append(0.5)
         return self.butler_rich_array
     
-
     def charles_richer_than_who(self):
         self.charles_hate_array.append('Charles')
         self.charles_hate_array.append(0.5)
@@ -88,7 +87,6 @@ class WhoKilledAgatha:
             self.not_richer_than_agatha.append('Buttler')
         if self.charles_hate_array[1] == 0:
             self.not_richer_than_agatha.append('Charles')
-
         return self.not_richer_than_agatha
     
     def get_the_killer(self):
