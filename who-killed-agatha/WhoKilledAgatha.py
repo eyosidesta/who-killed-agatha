@@ -23,4 +23,6 @@ class AgathaSolver:
         self.problem.addConstraint(lambda a, b, c: a == 1 and c == 0 and b == 0, ('Agatha', 'Butler', 'Charles'))  # Agatha hates Charles and herself
         self.problem.addConstraint(AllDifferentConstraint(), ['Agatha', 'Butler', 'Charles'])  # No one hates everyone
 
-    
+    def add_solution_constraints(self):
+        # Additional constraints for the solution
+        self.problem.addConstraint(lambda a_richer, a: a_richer == 'not_defined' and a == 0, ('Agatha_richer', 'Agatha'))  # Agatha is not richer than herself and hates herself
