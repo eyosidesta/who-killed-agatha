@@ -17,4 +17,5 @@ class AgathaSolver:
         # Adding basic constraints based on the given information
         self.problem.addConstraint(lambda a, c: a == 1 and c == 0, ('Agatha', 'Charles'))  # Agatha hates Charles
         self.problem.addConstraint(lambda c, a: a == 1 and c == 0, ('Charles', 'Agatha'))  # Charles hates everyone Agatha hates
+        self.problem.addConstraint(lambda c, b: c == 0 and b == 1, ('Charles', 'Butler'))  # Charles doesn't hate the butler
         
