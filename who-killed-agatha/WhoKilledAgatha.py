@@ -20,4 +20,7 @@ class AgathaSolver:
         self.problem.addConstraint(lambda c, b: c == 0 and b == 1, ('Charles', 'Butler'))  # Charles doesn't hate the butler
         self.problem.addConstraint(lambda b: b == 1, ('Butler',))  # The butler hates everyone not richer than Agatha
         self.problem.addConstraint(lambda a_richer, b_richer: a_richer == 1 and b_richer == 0, ('Agatha_richer', 'Butler_richer'))  # Agatha is not richer than the butler
-        
+        self.problem.addConstraint(lambda a, b, c: a == 1 and c == 0 and b == 0, ('Agatha', 'Butler', 'Charles'))  # Agatha hates Charles and herself
+        self.problem.addConstraint(AllDifferentConstraint(), ['Agatha', 'Butler', 'Charles'])  # No one hates everyone
+
+    
