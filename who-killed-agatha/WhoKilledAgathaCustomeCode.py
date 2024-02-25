@@ -37,7 +37,6 @@ class WhoKilledAgatha:
         self.butler_hate_array.append(1)
         return self.butler_hate_array
     
-
     def charles_hates_who(self):
         # **'Charles hates no one that Agatha hates'
         # charles doesn't hate agatha (second index 1 which means charles doesn't hate agatha)
