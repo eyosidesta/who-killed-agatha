@@ -26,3 +26,10 @@ class AgathaSolver:
     def add_solution_constraints(self):
         # Additional constraints for the solution
         self.problem.addConstraint(lambda a_richer, a: a_richer == 'not_defined' and a == 0, ('Agatha_richer', 'Agatha'))  # Agatha is not richer than herself and hates herself
+
+    def solve(self):
+        # Solve the problem
+        solutions = self.problem.getSolutions()
+
+
+    
