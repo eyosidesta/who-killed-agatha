@@ -39,5 +39,6 @@ class AgathaSolver:
             print("No solution found.")
 
 
+agatha_solver = AgathaSolver()
 
     
