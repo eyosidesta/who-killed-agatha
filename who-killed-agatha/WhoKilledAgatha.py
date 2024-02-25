@@ -41,5 +41,6 @@ class AgathaSolver:
 
 agatha_solver = AgathaSolver()
 agatha_solver.add_variables()
+agatha_solver.add_basic_constraints()
 
     
