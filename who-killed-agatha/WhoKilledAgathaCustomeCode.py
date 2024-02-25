@@ -79,7 +79,6 @@ class WhoKilledAgatha:
             self.hates_agatha.append('Butler')
         if self.charles_hate_array[1] == 1:
             self.hates_agatha.append('Charles')
-
         return self.hates_agatha
     
     def check_not_richer_than_agatha(self):
